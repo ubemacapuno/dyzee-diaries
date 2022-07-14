@@ -1,18 +1,11 @@
 <script context="module">
+	export const prerender = true;
 	import { browser, dev } from '$app/env';
   	import Seo from '$lib/components/Seo.svelte';
-
-	// // we don't need any JS on this page, though we'll load
-	// // it in dev so that we get hot module replacement...
-	// export const hydrate = dev;
 
 	// ...but if the client-side router is already loaded
 	// (i.e. we came here from elsewhere in the app), use it
 	export const router = browser;
-
-	// since there's no dynamic data here, we can prerender
-	// it so that it gets served as a static asset in prod
-	export const prerender = true;
 
 </script>
 
@@ -21,7 +14,8 @@
 <div class="page-wrapper">
 		<h1>Contact me</h1>
   		<p>For bookings, questions, inquiries, or even fan mail, please leave your info below!</p>
-	<form name="contact" method="POST" data-netlify="true">
+	<form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+		<input type="hidden" name="form-name" value="test" />
 		<div class="fields">
 			<div class="field half">
 				<p class="contact-form">Name (required)</p>
