@@ -12,7 +12,12 @@ const config = {
 			edge: false,
 			split: true
 		}),
-
+		prerender: {
+			crawl: true,
+			enabled: true,
+			onError: 'continue',
+			entries: ['*']
+		},
 		// Override http methods in the Todo forms
 		methodOverride: {
 			allowed: ['PATCH', 'DELETE']
