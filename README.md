@@ -12,9 +12,28 @@ This was a collaborative effort with the Pure Func team. The client had a slow-l
 **Tech used:** 
 Mainly Svelte/SvelteKit (HTML, CSS, JavaScript) was used for this project.
 
-To use this, please be sure to checkout [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte), and 
 
-## `npm -install`
+Please be sure to checkout [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte), and install the dependencies either using NPM or Yarn:
+
+Using NPM:
+
+```bash
+# Install dependencies
+$ npm install
+
+# Start development server
+$ npm run dev
+```
+
+Using Yarn:
+
+```bash
+# Install dependencies
+$ yarn
+
+# Start development server
+$ yarn dev
+```
 
 ## Optimizations:
 Comparing the home pages of the original application to the face-lifted SvelteKit application, the app achieved a Performance score boost from 63 to 97 per Google's Lighthouse tool:
